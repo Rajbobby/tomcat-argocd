@@ -18,7 +18,7 @@ spec:
       containers:
       - name: tomcat
         # Use Bitnami Tomcat image
-        image: bitnami/tomcat:10
+        image: bitnami/tomcat:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
