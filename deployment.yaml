@@ -17,6 +17,13 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: tomcat:9.0
+        # Use Bitnami Tomcat image
+        image: bitnami/tomcat:10
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
+        env:
+        - name: TOMCAT_USERNAME
+          value: admin
+        - name: TOMCAT_PASSWORD
+          value: admin123
